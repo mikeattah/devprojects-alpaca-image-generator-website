@@ -1,2 +1,4 @@
-export { ButtonOne } from "./ButtonOne/ButtonOne";
-export { ButtonTwo } from "./ButtonTwo/ButtonTwo";
+import ButtonOne from "./buttonone/buttonone";
+import ButtonTwo from "./buttontwo/buttontwo";
+
+export { ButtonOne, ButtonTwo };
