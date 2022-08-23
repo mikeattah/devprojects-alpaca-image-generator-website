@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Accessories",
+    "images": [
+      { "name": "Earings", "path": "./assets/images/accessories/earings.png" },
+      { "name": "Flower", "path": "./assets/images/accessories/flower.png" },
+      { "name": "Glasses", "path": "./assets/images/accessories/glasses.png" },
+      {
+        "name": "Headphones",
+        "path": "./assets/images/accessories/headphones.png"
+      }
+    ]
+  },
+  {
+    "name": "Backgrounds",
+    "images": [
+      { "name": "Blue 50", "path": "./assets/images/backgrounds/blue50.png" },
+      { "name": "Blue 60", "path": "./assets/images/backgrounds/blue60.png" },
+      { "name": "Blue 70", "path": "./assets/images/backgrounds/blue70.png" },
+      {
+        "name": "Dark Blue 30",
+        "path": "./assets/images/backgrounds/darkblue30.png"
+      },
+      {
+        "name": "Dark Blue 50",
+        "path": "./assets/images/backgrounds/darkblue50.png"
+      },
+      {
+        "name": "Dark Blue 70",
+        "path": "./assets/images/backgrounds/darkblue70.png"
+      },
+      { "name": "Green 50", "path": "./assets/images/backgrounds/green50.png" },
+      { "name": "Green 60", "path": "./assets/images/backgrounds/green60.png" },
+      { "name": "Green 70", "path": "./assets/images/backgrounds/green70.png" },
+      { "name": "Grey 40", "path": "./assets/images/backgrounds/grey40.png" },
+      { "name": "Grey 70", "path": "./assets/images/backgrounds/grey70.png" },
+      { "name": "Grey 80", "path": "./assets/images/backgrounds/grey80.png" },
+      { "name": "Red 50", "path": "./assets/images/backgrounds/red50.png" },
+      { "name": "Red 60", "path": "./assets/images/backgrounds/red60.png" },
+      { "name": "Red 70", "path": "./assets/images/backgrounds/red70.png" },
+      {
+        "name": "Yellow 50",
+        "path": "./assets/images/backgrounds/yellow50.png"
+      },
+      {
+        "name": "Yellow 60",
+        "path": "./assets/images/backgrounds/yellow60.png"
+      },
+      {
+        "name": "Yellow 70",
+        "path": "./assets/images/backgrounds/yellow70.png"
+      }
+    ]
+  },
+  {
+    "name": "Ears",
+    "images": [
+      { "name": "Default", "path": "./assets/images/ears/default.png" },
+      {
+        "name": "Tilt Backward",
+        "path": "./assets/images/ears/tilt-backward.png"
+      },
+      {
+        "name": "Tilt Forward",
+        "path": "./assets/images/ears/tilt-forward.png"
+      }
+    ]
+  },
+  {
+    "name": "Eyes",
+    "images": [
+      { "name": "Angry", "path": "./assets/images/eyes/angry.png" },
+      { "name": "Default", "path": "./assets/images/eyes/default.png" },
+      { "name": "Naughty", "path": "./assets/images/eyes/naughty.png" },
+      { "name": "Panda", "path": "./assets/images/eyes/panda.png" },
+      { "name": "Smart", "path": "./assets/images/eyes/smart.png" },
+      { "name": "Star", "path": "./assets/images/eyes/star.png" }
+    ]
+  },
+  {
+    "name": "Hair",
+    "images": [
+      { "name": "Bang", "path": "./assets/images/hair/bang.png" },
+      { "name": "Curls", "path": "./assets/images/hair/curls.png" },
+      { "name": "Default", "path": "./assets/images/hair/default.png" },
+      { "name": "Elegant", "path": "./assets/images/hair/elegant.png" },
+      { "name": "Fancy", "path": "./assets/images/hair/fancy.png" },
+      { "name": "Quiff", "path": "./assets/images/hair/quiff.png" },
+      { "name": "Short", "path": "./assets/images/hair/short.png" }
+    ]
+  },
+  {
+    "name": "Leg",
+    "images": [
+      { "name": "Bubble Tea", "path": "./assets/images/leg/bubble-tea.png" },
+      { "name": "Cookie", "path": "./assets/images/leg/cookie.png" },
+      { "name": "Default", "path": "./assets/images/leg/default.png" },
+      {
+        "name": "Game Console",
+        "path": "./assets/images/leg/game-console.png"
+      },
+      {
+        "name": "Tilt Backward",
+        "path": "./assets/images/leg/tilt-backward.png"
+      },
+      { "name": "Tilt Forward", "path": "./assets/images/leg/tilt-forward.png" }
+    ]
+  },
+  {
+    "name": "Mouth",
+    "images": [
+      { "name": "Astonished", "path": "./assets/images/mouth/astonished.png" },
+      { "name": "Default", "path": "./assets/images/mouth/default.png" },
+      { "name": "Eating", "path": "./assets/images/mouth/eating.png" },
+      { "name": "Laugh", "path": "./assets/images/mouth/laugh.png" },
+      { "name": "Tongue", "path": "./assets/images/mouth/tongue.png" }
+    ]
+  },
+  {
+    "name": "Neck",
+    "images": [
+      {
+        "name": "Bend Backward",
+        "path": "./assets/images/neck/bend-backward.png"
+      },
+      {
+        "name": "Bend Forward",
+        "path": "./assets/images/neck/bend-forward.png"
+      },
+      { "name": "Default", "path": "./assets/images/neck/default.png" },
+      { "name": "Thick", "path": "./assets/images/neck/thick.png" }
+    ]
+  },
+  { "name": "Nose", "path": "./assets/images/nose.png" }
+]
