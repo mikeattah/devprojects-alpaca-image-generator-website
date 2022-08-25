@@ -1,11 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { nanoid } from 'nanoid';
 import './App.css';
 import { AlpacaImage } from './components/molecules';
 import { ButtonOne, ButtonTwo } from './components/atoms';
 import data from './assets/data/data.json';
 
 function App() {
-  const [current, setCurrent] = useState(data[0].name);
+  const [accessory, setAccessory] = useState(data[0].name);
+  const [style, setStyle] = useState(data[0].images[0].path);
+
+  /** */
+  const handleAccessoryToggle = () => {};
+
+  /** */
+  const handleStyleToggle = () => {};
+
   return (
     <div className='app-container'>
       <header className='app-header'>
@@ -24,17 +33,28 @@ function App() {
             <h2 className='app-sub-title'>ACCESSORIZE THE ALPACA&apos;S</h2>
             <div className='app-section-right-buttons'>
               {data.map(item => (
-                <ButtonTwo name={item.name} />
+                <ButtonTwo
+                  key={nanoid()}
+                  name={item.name}
+                  buttonClick={() => setAccessory(item.name)}
+                />
               ))}
             </div>
           </div>
           <div className='app-section-right-group'>
-            <h2 className='app-sub-title'>STYLE</h2>
+            <h2 className='app-sub-title'>accessory</h2>
             <div className='app-section-right-buttons'>
               {data.map(item => {
-                if (item.name === current) {
-                  item.images.map(element => <ButtonTwo name={element} />);
-                }
+                return (
+                  item.name === accessory &&
+                  item.images.map(element => (
+                    <ButtonTwo
+                      key={nanoid()}
+                      name={element.name}
+                      buttonClick={() => setStyle(element.path)}
+                    />
+                  ))
+                );
               })}
             </div>
           </div>

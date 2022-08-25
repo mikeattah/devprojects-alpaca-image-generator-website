@@ -2,7 +2,12 @@
 import './ButtonTwo.css';
 
 function ButtonTwo(props) {
-  return <button className='button-two'>{props.name}</button>;
+  const { name, buttonClick } = props;
+  return (
+    <button className='button-two' onClick={buttonClick}>
+      {name}
+    </button>
+  );
 }
 
 export default ButtonTwo;
