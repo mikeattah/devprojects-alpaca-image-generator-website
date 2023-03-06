@@ -42,7 +42,7 @@ function App() {
             </div>
           </div>
           <div className='app-section-right-group'>
-            <h2 className='app-sub-title'>accessory</h2>
+            <h2 className='app-sub-title'>STYLE</h2>
             <div className='app-section-right-buttons'>
               {data.map(item => {
                 return (

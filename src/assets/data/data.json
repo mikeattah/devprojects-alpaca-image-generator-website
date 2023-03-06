@@ -130,6 +130,5 @@
       { "name": "Default", "path": "./assets/images/neck/default.png" },
       { "name": "Thick", "path": "./assets/images/neck/thick.png" }
     ]
-  },
-  { "name": "Nose", "path": "./assets/images/nose.png" }
+  }
 ]

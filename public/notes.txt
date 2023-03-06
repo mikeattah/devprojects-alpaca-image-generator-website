@@ -1,0 +1,5 @@
+https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code
+https://fontawesome.com/icons/image?s=regular&f=classic
+https://fontawesome.com/docs/web/use-with/react/add-icons
+https://developer.mozilla.org/en-US/docs/Web/CSS/border
+https://www.codementor.io/projects/web/alpaca-image-generator-website-ce2oc0eus8
