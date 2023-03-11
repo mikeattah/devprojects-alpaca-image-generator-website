@@ -1,0 +1,38 @@
+.primary-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+}
+
+.primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+}
+
+.secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+}
+
+.secondary-button:active {
+    border: 1.5px solid #0c295e;
+}
+
+.secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+}
+
+.secondary-button-active {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+}
