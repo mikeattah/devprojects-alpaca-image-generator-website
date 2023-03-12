@@ -24,6 +24,7 @@
 
 .secondary-button:active {
     border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
 }
 
 .secondary-button:hover {
@@ -32,7 +33,7 @@
     cursor: pointer;
 }
 
-.secondary-button-active {
+.secondary-button-clicked {
     background-color: #0c295e;
     border: 1.5px solid #0c295e;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 function Button({ name, path, buttonClick, buttonType, buttonState }) {
-  let activeStyle = buttonState === 'active' ? 'secondary-button-active' : '';
+  let clickedStyle = buttonState === 'clicked' ? 'secondary-button-clicked' : '';
   if (buttonType === 'primary') {
     return (
       <button className='primary-button'>
@@ -11,7 +11,7 @@ function Button({ name, path, buttonClick, buttonType, buttonState }) {
     );
   } else {
     return (
-      <button className={ `secondary-button ${activeStyle}` } onClick={ buttonClick }>
+      <button className={ `secondary-button ${clickedStyle}` } onClick={ buttonClick }>
         { name }
       </button>
     );
