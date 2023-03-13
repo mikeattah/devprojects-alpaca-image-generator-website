@@ -3,3 +3,6 @@ https://fontawesome.com/icons/image?s=regular&f=classic
 https://fontawesome.com/docs/web/use-with/react/add-icons
 https://developer.mozilla.org/en-US/docs/Web/CSS/border
 https://www.codementor.io/projects/web/alpaca-image-generator-website-ce2oc0eus8
+
+https://stackoverflow.com/questions/6011378/how-to-add-image-to-canvas
+https://javascript.plainenglish.io/how-to-download-a-text-image-file-in-javascript-without-a-server-9ccadfbe4694

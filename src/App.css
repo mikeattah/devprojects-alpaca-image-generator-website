@@ -1,4 +1,5 @@
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}
 
 @media (max-width: 768px) {
   .app-container {
@@ -16,7 +17,8 @@
     border: dashed red;
   }
 
-  .app-title {}
+  .app-title {
+  }
 
   .app-main {
     height: min-content;
@@ -31,7 +33,8 @@
     border: dashed red;
   }
 
-  .app-section-left-buttons {}
+  .app-section-left-buttons {
+  }
 
   .app-section-right {
     height: 500px;
@@ -39,11 +42,14 @@
     border: dashed red;
   }
 
-  .app-section-right-group {}
+  .app-section-right-group {
+  }
 
-  .app-sub-title {}
+  .app-sub-title {
+  }
 
-  .app-section-right-buttons {}
+  .app-section-right-buttons {
+  }
 }
 
 @media (max-width: 1024px) {
@@ -62,7 +68,8 @@
     border: dashed red;
   }
 
-  .app-title {}
+  .app-title {
+  }
 
   .app-main {
     height: min-content;
@@ -77,7 +84,8 @@
     border: dashed red;
   }
 
-  .app-section-left-buttons {}
+  .app-section-left-buttons {
+  }
 
   .app-section-right {
     height: 500px;
@@ -85,11 +93,14 @@
     border: dashed red;
   }
 
-  .app-section-right-group {}
+  .app-section-right-group {
+  }
 
-  .app-sub-title {}
+  .app-sub-title {
+  }
 
-  .app-section-right-buttons {}
+  .app-section-right-buttons {
+  }
 }
 
 @media (max-width: 1200px) {
@@ -108,7 +119,8 @@
     border: dashed red;
   }
 
-  .app-title {}
+  .app-title {
+  }
 
   .app-main {
     height: min-content;
@@ -123,7 +135,8 @@
     border: dashed red;
   }
 
-  .app-section-left-buttons {}
+  .app-section-left-buttons {
+  }
 
   .app-section-right {
     height: 500px;
@@ -131,11 +144,14 @@
     border: dashed red;
   }
 
-  .app-section-right-group {}
+  .app-section-right-group {
+  }
 
-  .app-sub-title {}
+  .app-sub-title {
+  }
 
-  .app-section-right-buttons {}
+  .app-section-right-buttons {
+  }
 }
 
 @media (min-width: 1201px) {
@@ -155,7 +171,8 @@
     width: 100%;
   }
 
-  .app-title {}
+  .app-title {
+  }
 
   .app-main {
     height: min-content;
@@ -173,8 +190,14 @@
     align-items: flex-start;
   }
 
+  .app-alpaca-image-container {
+    height: 80%;
+    width: 80%;
+    background-color: #0c295e;
+  }
+
   .app-section-left-buttons {
-    height: 17.50%;
+    height: 17.5%;
     width: 80%;
     display: flex;
     flex-direction: row;
