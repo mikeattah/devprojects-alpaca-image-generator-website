@@ -6,6 +6,7 @@ import { Button } from './components/atoms';
 import data from './assets/data/data.json';
 
 function App() {
+  const [image, setImage] = useState('');
   const [accessory, setAccessory] = useState(data[0].name);
   const [style, setStyle] = useState(data[0].images[0].name);
   const [accessories, setAccessories] = useState(data[0].images[0].path);
@@ -16,6 +17,51 @@ function App() {
   const [leg, setLeg] = useState(data[5].images[0].path);
   const [mouth, setMouth] = useState(data[6].images[0].path);
   const [neck, setNeck] = useState(data[7].images[0].path);
+  const nose = './assets/images/nose.png';
+
+  /**
+   * Set Image URL for file download
+   *
+   * @return void
+   */
+  const handleSetImage = image => setImage(image);
+
+  /**
+   * Set accessory and style
+   *
+   * @return void
+   */
+  const handleSetAccessory = accessory => {
+    setAccessory(accessory);
+    switch (accessory) {
+      case accessories:
+        setStyle(data[0].images[0].name);
+        break;
+      case backgrounds:
+        setStyle(data[1].images[0].name);
+        break;
+      case ears:
+        setStyle(data[2].images[0].name);
+        break;
+      case eyes:
+        setStyle(data[3].images[0].name);
+        break;
+      case hair:
+        setStyle(data[4].images[0].name);
+        break;
+      case leg:
+        setStyle(data[5].images[0].name);
+        break;
+      case mouth:
+        setStyle(data[6].images[0].name);
+        break;
+      case neck:
+        setStyle(data[7].images[0].name);
+        break;
+      default:
+        break;
+    }
+  };
 
   /**
    * Generate Alpaca Image from random selection of body parts
@@ -23,7 +69,7 @@ function App() {
    * @return void
    */
   const generateRandomImage = () => {
-    let accessoriesLen = data[0].images.length,
+    const accessoriesLen = data[0].images.length,
       backgroundsLen = data[1].images.length,
       earsLen = data[2].images.length,
       eyesLen = data[3].images.length,
@@ -32,7 +78,7 @@ function App() {
       mouthLen = data[6].images.length,
       neckLen = data[7].images.length;
 
-    let accessoriesIndex = Math.floor(Math.random() * accessoriesLen),
+    const accessoriesIndex = Math.floor(Math.random() * accessoriesLen),
       backgroundsIndex = Math.floor(Math.random() * backgroundsLen),
       earsIndex = Math.floor(Math.random() * earsLen),
       eyesIndex = Math.floor(Math.random() * eyesLen),
@@ -98,7 +144,7 @@ function App() {
    *
    * source: https://javascript.plainenglish.io/how-to-download-a-text-image-file-in-javascript-without-a-server-9ccadfbe4694
    */
-  const handleImageDownload = async () => {};
+  // const handleImageDownload = async () => {};
 
   return (
     <div className='app-container'>
@@ -107,7 +153,7 @@ function App() {
       </header>
       <main className='app-main'>
         <section className='app-section-left'>
-          <div className='app-alpaca-image-container'>
+          <canvas id='alpaca-image' className='app-alpaca-image-container'>
             <AlpacaImage
               accessories={accessories}
               backgrounds={backgrounds}
@@ -117,20 +163,26 @@ function App() {
               leg={leg}
               mouth={mouth}
               neck={neck}
+              nose={nose}
+              handleSetImage={handleSetImage}
             />
-          </div>
+          </canvas>
           <div className='app-section-left-buttons'>
             <Button
               name='Random'
               buttonClick={generateRandomImage}
-              buttonType='primary'
+              buttonDownload=''
+              buttonHref=''
               buttonState=''
+              buttonType='primary'
             />
             <Button
               name='Download'
-              buttonClick={handleImageDownload}
-              buttonType='primary'
+              buttonClick=''
+              buttonDownload='alpaca-image.png'
+              buttonHref={image}
               buttonState=''
+              buttonType='link'
             />
           </div>
         </section>
@@ -142,11 +194,13 @@ function App() {
                 <Button
                   key={nanoid()}
                   name={item.name}
-                  buttonClick={() => setAccessory(item.name)}
-                  buttonType='secondary'
+                  buttonClick={() => handleSetAccessory(item.name)}
+                  buttonDownload=''
+                  buttonHref=''
                   buttonState={
                     item.name === accessory ? 'clicked' : 'unclicked'
                   }
+                  buttonType='secondary'
                 />
               ))}
             </div>
@@ -168,10 +222,12 @@ function App() {
                           element.path
                         )
                       }
-                      buttonType='secondary'
+                      buttonDownload=''
+                      buttonHref=''
                       buttonState={
                         element.name === style ? 'clicked' : 'unclicked'
                       }
+                      buttonType='secondary'
                     />
                   ))
                 );
