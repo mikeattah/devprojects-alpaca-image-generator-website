@@ -2,19 +2,19 @@
 import './AlpacaImage.css';
 
 function AlpacaImage({
-  accessories,
-  backgrounds,
-  ears,
-  eyes,
-  hair,
-  leg,
-  mouth,
-  neck,
-  nose,
-  handleSetImage,
+  accessoriesPath,
+  backgroundsPath,
+  earsPath,
+  eyesPath,
+  hairPath,
+  legPath,
+  mouthPath,
+  neckPath,
+  nosePath,
+  setImageURL,
 }) {
   // variable to hold alpaca image URL
-  let alpacaImageURL = '';
+  let imageURL = '';
 
   /**
    * IIFE | Draw Alpaca body parts' images on canvas
@@ -40,82 +40,82 @@ function AlpacaImage({
     context.miterLimit = 10;
 
     // draw accessories
-    let accessoriesImage = new Image();
+    const accessoriesImage = new Image();
     accessoriesImage.crossOrigin = 'anonymous';
-    accessoriesImage.src = accessories;
+    accessoriesImage.src = accessoriesPath;
     accessoriesImage.onload = () => {
       context.drawImage(accessoriesImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw backgrounds
-    let backgroundsImage = new Image();
+    const backgroundsImage = new Image();
     backgroundsImage.crossOrigin = 'anonymous';
-    backgroundsImage.src = backgrounds;
+    backgroundsImage.src = backgroundsPath;
     backgroundsImage.onload = () => {
       context.drawImage(backgroundsImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw ears
-    let earsImage = new Image();
+    const earsImage = new Image();
     earsImage.crossOrigin = 'anonymous';
-    earsImage.src = ears;
+    earsImage.src = earsPath;
     earsImage.onload = () => {
       context.drawImage(earsImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw eyes
-    let eyesImage = new Image();
+    const eyesImage = new Image();
     eyesImage.crossOrigin = 'anonymous';
-    eyesImage.src = eyes;
+    eyesImage.src = eyesPath;
     eyesImage.onload = () => {
       context.drawImage(eyesImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw hair
-    let hairImage = new Image();
+    const hairImage = new Image();
     hairImage.crossOrigin = 'anonymous';
-    hairImage.src = hair;
+    hairImage.src = hairPath;
     hairImage.onload = () => {
       context.drawImage(hairImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw leg
-    let legImage = new Image();
+    const legImage = new Image();
     legImage.crossOrigin = 'anonymous';
-    legImage.src = leg;
+    legImage.src = legPath;
     legImage.onload = () => {
       context.drawImage(legImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw mouth
-    let mouthImage = new Image();
+    const mouthImage = new Image();
     mouthImage.crossOrigin = 'anonymous';
-    mouthImage.src = mouth;
+    mouthImage.src = mouthPath;
     mouthImage.onload = () => {
       context.drawImage(mouthImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw neck
-    let neckImage = new Image();
+    const neckImage = new Image();
     neckImage.crossOrigin = 'anonymous';
-    neckImage.src = neck;
+    neckImage.src = neckPath;
     neckImage.onload = () => {
       context.drawImage(neckImage, 0, 0, canvas.width, canvas.height);
     };
 
     // draw nose
-    let noseImage = new Image();
+    const noseImage = new Image();
     noseImage.crossOrigin = 'anonymous';
-    noseImage.src = nose;
+    noseImage.src = nosePath;
     noseImage.onload = () => {
       context.drawImage(noseImage, 0, 0, canvas.width, canvas.height);
     };
 
     /* Finally, retrieve the encoded image content as a base64 String from canvas object */
-    alpacaImageURL = await Promise.resolve(canvas.toDataURL());
+    imageURL = await Promise.resolve(canvas.toDataURL());
   })();
 
-  handleSetImage(alpacaImageURL);
+  setImageURL(imageURL);
 
   // return <image src={alpacaImageURL} alt='Alpaca Image' />;
 }

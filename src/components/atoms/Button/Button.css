@@ -43,3 +43,9 @@
   background-color: #0c295e;
   border: 1.5px solid #0c295e;
 }
+
+.secondary-button-clicked:hover {
+  background-color: #ebebec;
+  color: #0c295e;
+  border: 1.5px solid #0c295e;
+}

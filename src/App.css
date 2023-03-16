@@ -190,12 +190,6 @@
     align-items: flex-start;
   }
 
-  .app-alpaca-image-container {
-    height: 80%;
-    width: 80%;
-    /* background-color: #0c295e; */
-  }
-
   .app-section-left-buttons {
     height: 17.5%;
     width: 80%;

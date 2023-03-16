@@ -6,57 +6,68 @@ import { Button } from './components/atoms';
 import data from './assets/data/data.json';
 
 function App() {
-  const [image, setImage] = useState('');
-  const [accessory, setAccessory] = useState(data[0].name);
-  const [style, setStyle] = useState(data[0].images[0].name);
-  const [accessories, setAccessories] = useState(data[0].images[0].path);
-  const [backgrounds, setBackgrounds] = useState(data[1].images[0].path);
-  const [ears, setEars] = useState(data[2].images[0].path);
-  const [eyes, setEyes] = useState(data[3].images[0].path);
-  const [hair, setHair] = useState(data[4].images[0].path);
-  const [leg, setLeg] = useState(data[5].images[0].path);
-  const [mouth, setMouth] = useState(data[6].images[0].path);
-  const [neck, setNeck] = useState(data[7].images[0].path);
-  const nose = './assets/images/nose.png';
+  const [imageURL, setImageURL] = useState(''),
+    [accessory, setAccessory] = useState(data[0].name),
+    [accessoriesName, setAccessoriesName] = useState(data[0].images[0].name),
+    [accessoriesPath, setAccessoriesPath] = useState(data[0].images[0].path),
+    [backgroundsName, setBackgroundsName] = useState(data[1].images[0].name),
+    [backgroundsPath, setBackgroundsPath] = useState(data[1].images[0].path),
+    [earsName, setEarsName] = useState(data[2].images[0].name),
+    [earsPath, setEarsPath] = useState(data[2].images[0].path),
+    [eyesName, setEyesName] = useState(data[3].images[0].name),
+    [eyesPath, setEyesPath] = useState(data[3].images[0].path),
+    [hairName, setHairName] = useState(data[4].images[0].name),
+    [hairPath, setHairPath] = useState(data[4].images[0].path),
+    [legName, setLegName] = useState(data[5].images[0].name),
+    [legPath, setLegPath] = useState(data[5].images[0].path),
+    [mouthName, setMouthName] = useState(data[6].images[0].name),
+    [mouthPath, setMouthPath] = useState(data[6].images[0].path),
+    [neckName, setNeckName] = useState(data[7].images[0].name),
+    [neckPath, setNeckPath] = useState(data[7].images[0].path),
+    nosePath = './assets/images/nose.png',
+    userSelection = {
+      Accessories: accessoriesName,
+      Backgrounds: backgroundsName,
+      Ears: earsName,
+      Eyes: eyesName,
+      Hair: hairName,
+      Leg: legName,
+      Mouth: mouthName,
+      Neck: neckName,
+    };
 
   /**
-   * Set Image URL for file download
+   * Update user selection
    *
+   * @param accessory
+   * @param selection
    * @return void
    */
-  const handleSetImage = image => setImage(image);
-
-  /**
-   * Set accessory and style
-   *
-   * @return void
-   */
-  const handleSetAccessory = accessory => {
-    setAccessory(accessory);
+  const updateUserSelection = (accessory, selection) => {
     switch (accessory) {
-      case accessories:
-        setStyle(data[0].images[0].name);
+      case 'Accessories':
+        userSelection['Accessories'] = selection;
         break;
-      case backgrounds:
-        setStyle(data[1].images[0].name);
+      case 'Backgrounds':
+        userSelection['Backgrounds'] = selection;
         break;
-      case ears:
-        setStyle(data[2].images[0].name);
+      case 'Ears':
+        userSelection['Ears'] = selection;
         break;
-      case eyes:
-        setStyle(data[3].images[0].name);
+      case 'Eyes':
+        userSelection['Eyes'] = selection;
         break;
-      case hair:
-        setStyle(data[4].images[0].name);
+      case 'Hair':
+        userSelection['Hair'] = selection;
         break;
-      case leg:
-        setStyle(data[5].images[0].name);
+      case 'Leg':
+        userSelection['Leg'] = selection;
         break;
-      case mouth:
-        setStyle(data[6].images[0].name);
+      case 'Mouth':
+        userSelection['Mouth'] = selection;
         break;
-      case neck:
-        setStyle(data[7].images[0].name);
+      case 'Neck':
+        userSelection['Neck'] = selection;
         break;
       default:
         break;
@@ -76,9 +87,8 @@ function App() {
       hairLen = data[4].images.length,
       legLen = data[5].images.length,
       mouthLen = data[6].images.length,
-      neckLen = data[7].images.length;
-
-    const accessoriesIndex = Math.floor(Math.random() * accessoriesLen),
+      neckLen = data[7].images.length,
+      accessoriesIndex = Math.floor(Math.random() * accessoriesLen),
       backgroundsIndex = Math.floor(Math.random() * backgroundsLen),
       earsIndex = Math.floor(Math.random() * earsLen),
       eyesIndex = Math.floor(Math.random() * eyesLen),
@@ -87,50 +97,82 @@ function App() {
       mouthIndex = Math.floor(Math.random() * mouthLen),
       neckIndex = Math.floor(Math.random() * neckLen);
 
-    setAccessories(data[0].images[accessoriesIndex].path);
-    setBackgrounds(data[1].images[backgroundsIndex].path);
-    setEars(data[2].images[earsIndex].path);
-    setEyes(data[3].images[eyesIndex].path);
-    setHair(data[4].images[hairIndex].path);
-    setLeg(data[5].images[legIndex].path);
-    setMouth(data[6].images[mouthIndex].path);
-    setNeck(data[7].images[neckIndex].path);
+    setAccessoriesName(data[0].images[accessoriesIndex].name);
+    setAccessoriesPath(data[0].images[accessoriesIndex].path);
+    setBackgroundsName(data[1].images[backgroundsIndex].name);
+    setBackgroundsPath(data[1].images[backgroundsIndex].path);
+    setEarsName(data[2].images[earsIndex].name);
+    setEarsPath(data[2].images[earsIndex].path);
+    setEyesName(data[3].images[eyesIndex].name);
+    setEyesPath(data[3].images[eyesIndex].path);
+    setHairName(data[4].images[hairIndex].name);
+    setHairPath(data[4].images[hairIndex].path);
+    setLegName(data[5].images[legIndex].name);
+    setLegPath(data[5].images[legIndex].path);
+    setMouthName(data[6].images[mouthIndex].name);
+    setMouthPath(data[6].images[mouthIndex].path);
+    setNeckName(data[7].images[neckIndex].name);
+    setNeckPath(data[7].images[neckIndex].path);
+
+    updateUserSelection('Accessories', accessoriesName);
+    updateUserSelection('Backgrounds', backgroundsName);
+    updateUserSelection('Ears', earsName);
+    updateUserSelection('Eyes', eyesName);
+    updateUserSelection('Hair', hairName);
+    updateUserSelection('Leg', legName);
+    updateUserSelection('Mouth', mouthName);
+    updateUserSelection('Neck', neckName);
   };
 
   /**
    * Switch accessory style based on user selection
    *
-   * @param accessoryType
+   * @param styleType
    * @param styleName
    * @param stylePath
    * @return void
    */
-  const handleStyleSelection = (accessoryType, styleName, stylePath) => {
-    setStyle(styleName);
-    switch (accessoryType) {
-      case accessories:
-        setAccessories(stylePath);
+  const handleStyleSelection = (styleType, styleName, stylePath) => {
+    switch (styleType) {
+      case 'Accessories':
+        updateUserSelection('Accessories', styleName);
+        setAccessoriesName(styleName);
+        setAccessoriesPath(stylePath);
         break;
-      case backgrounds:
-        setBackgrounds(stylePath);
+      case 'Backgrounds':
+        updateUserSelection('Backgrounds', styleName);
+        setBackgroundsName(styleName);
+        setBackgroundsPath(stylePath);
         break;
-      case ears:
-        setEars(stylePath);
+      case 'Ears':
+        updateUserSelection('Ears', styleName);
+        setEarsName(styleName);
+        setEarsPath(stylePath);
         break;
-      case eyes:
-        setEyes(stylePath);
+      case 'Eyes':
+        updateUserSelection('Eyes', styleName);
+        setEyesName(styleName);
+        setEyesPath(stylePath);
         break;
-      case hair:
-        setHair(stylePath);
+      case 'Hair':
+        updateUserSelection('Hair', styleName);
+        setHairName(styleName);
+        setHairPath(stylePath);
         break;
-      case leg:
-        setLeg(stylePath);
+      case 'Leg':
+        updateUserSelection('Leg', styleName);
+        setLegName(styleName);
+        setLegPath(stylePath);
         break;
-      case mouth:
-        setMouth(stylePath);
+      case 'Mouth':
+        updateUserSelection('Mouth', styleName);
+        setMouthName(styleName);
+        setMouthPath(stylePath);
         break;
-      case neck:
-        setNeck(stylePath);
+      case 'Neck':
+        updateUserSelection('Neck', styleName);
+        setNeckName(styleName);
+        setNeckPath(stylePath);
         break;
       default:
         break;
@@ -153,24 +195,25 @@ function App() {
       </header>
       <main className='app-main'>
         <section className='app-section-left'>
-          <canvas id='alpaca-image' className='app-alpaca-image-container'>
+          <canvas id='alpaca-image' width='300' height='400'>
             <AlpacaImage
-              accessories={accessories}
-              backgrounds={backgrounds}
-              ears={ears}
-              eyes={eyes}
-              hair={hair}
-              leg={leg}
-              mouth={mouth}
-              neck={neck}
-              nose={nose}
-              handleSetImage={handleSetImage}
+              accessoriesPath={accessoriesPath}
+              backgroundsPath={backgroundsPath}
+              earsPath={earsPath}
+              eyesPath={eyesPath}
+              hairPath={hairPath}
+              legPath={legPath}
+              mouthPath={mouthPath}
+              neckPath={neckPath}
+              nosePath={nosePath}
+              setImageURL={imageURL => setImageURL(imageURL)}
             />
+            Alpaca Image Rendering
           </canvas>
           <div className='app-section-left-buttons'>
             <Button
               name='Random'
-              buttonClick={generateRandomImage}
+              buttonClick={() => generateRandomImage()}
               buttonDownload=''
               buttonHref=''
               buttonState=''
@@ -180,7 +223,7 @@ function App() {
               name='Download'
               buttonClick=''
               buttonDownload='alpaca-image.png'
-              buttonHref={image}
+              buttonHref={imageURL}
               buttonState=''
               buttonType='link'
             />
@@ -194,7 +237,7 @@ function App() {
                 <Button
                   key={nanoid()}
                   name={item.name}
-                  buttonClick={() => handleSetAccessory(item.name)}
+                  buttonClick={() => setAccessory(item.name)}
                   buttonDownload=''
                   buttonHref=''
                   buttonState={
@@ -225,7 +268,9 @@ function App() {
                       buttonDownload=''
                       buttonHref=''
                       buttonState={
-                        element.name === style ? 'clicked' : 'unclicked'
+                        element.name === userSelection[accessory]
+                          ? 'clicked'
+                          : 'unclicked'
                       }
                       buttonType='secondary'
                     />

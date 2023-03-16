@@ -12,7 +12,11 @@ function Button({
   let clickedStyle =
     buttonState === 'clicked' ? 'secondary-button-clicked' : '';
   if (buttonType === 'primary') {
-    return <button className='primary-button'>{name}</button>;
+    return (
+      <button className='primary-button' onClick={buttonClick}>
+        {name}
+      </button>
+    );
   } else if (buttonType === 'link') {
     return (
       <a href={buttonHref} download={buttonDownload} className='primary-button'>
