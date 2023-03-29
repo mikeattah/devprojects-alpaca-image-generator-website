@@ -6,3 +6,39 @@ https://www.codementor.io/projects/web/alpaca-image-generator-website-ce2oc0eus8
 
 https://stackoverflow.com/questions/6011378/how-to-add-image-to-canvas
 https://javascript.plainenglish.io/how-to-download-a-text-image-file-in-javascript-without-a-server-9ccadfbe4694
+
+// Get the canvas element
+var canvas = document.getElementById("myCanvas"); 
+
+// Get the 2D context of the canvas
+var ctx = canvas.getContext("2d"); 
+
+// Create image objects
+var imageObj1 = new Image();
+imageObj1.src = "image1.png";
+
+var imageObj2 = new Image();
+imageObj2.src = "image2.png";
+
+// Wait for the images to load
+imageObj1.onload = function() {
+    // Draw the first image
+    ctx.drawImage(imageObj1, 0, 0);
+};
+
+imageObj2.onload = function() {
+    // Draw the second image
+    ctx.drawImage(imageObj2, 100, 100);
+};
+
+let canvas = document.getElementById("myCanvas");
+let downloadLink = document.getElementById("downloadLink");
+
+// get the base64 encoded image data
+let imageData = canvas.toDataURL("image/png");
+
+// set the download link href attribute to the image data
+downloadLink.href = imageData;
+
+// set the download link download attribute to the desired file name
+downloadLink.download = "canvas.png";

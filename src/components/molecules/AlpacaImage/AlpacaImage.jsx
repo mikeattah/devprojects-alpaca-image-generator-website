@@ -52,7 +52,7 @@ function AlpacaImage({
     backgroundsImage.crossOrigin = 'anonymous';
     backgroundsImage.src = backgroundsPath;
     backgroundsImage.onload = () => {
-      context.drawImage(backgroundsImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(backgroundsImage, 5, 5, canvas.width, canvas.height);
     };
 
     // draw ears
@@ -60,7 +60,7 @@ function AlpacaImage({
     earsImage.crossOrigin = 'anonymous';
     earsImage.src = earsPath;
     earsImage.onload = () => {
-      context.drawImage(earsImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(earsImage, 10, 10, canvas.width, canvas.height);
     };
 
     // draw eyes
@@ -68,7 +68,7 @@ function AlpacaImage({
     eyesImage.crossOrigin = 'anonymous';
     eyesImage.src = eyesPath;
     eyesImage.onload = () => {
-      context.drawImage(eyesImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(eyesImage, 15, 15, canvas.width, canvas.height);
     };
 
     // draw hair
@@ -76,7 +76,7 @@ function AlpacaImage({
     hairImage.crossOrigin = 'anonymous';
     hairImage.src = hairPath;
     hairImage.onload = () => {
-      context.drawImage(hairImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(hairImage, 20, 20, canvas.width, canvas.height);
     };
 
     // draw leg
@@ -84,7 +84,7 @@ function AlpacaImage({
     legImage.crossOrigin = 'anonymous';
     legImage.src = legPath;
     legImage.onload = () => {
-      context.drawImage(legImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(legImage, 25, 25, canvas.width, canvas.height);
     };
 
     // draw mouth
@@ -92,7 +92,7 @@ function AlpacaImage({
     mouthImage.crossOrigin = 'anonymous';
     mouthImage.src = mouthPath;
     mouthImage.onload = () => {
-      context.drawImage(mouthImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(mouthImage, 30, 30, canvas.width, canvas.height);
     };
 
     // draw neck
@@ -100,7 +100,7 @@ function AlpacaImage({
     neckImage.crossOrigin = 'anonymous';
     neckImage.src = neckPath;
     neckImage.onload = () => {
-      context.drawImage(neckImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(neckImage, 35, 35, canvas.width, canvas.height);
     };
 
     // draw nose
@@ -108,11 +108,11 @@ function AlpacaImage({
     noseImage.crossOrigin = 'anonymous';
     noseImage.src = nosePath;
     noseImage.onload = () => {
-      context.drawImage(noseImage, 0, 0, canvas.width, canvas.height);
+      context.drawImage(noseImage, 40, 40, canvas.width, canvas.height);
     };
 
     /* Finally, retrieve the encoded image content as a base64 String from canvas object */
-    imageURL = await Promise.resolve(canvas.toDataURL());
+    imageURL = await Promise.resolve(canvas.toDataURL('image/png'));
   })();
 
   setImageURL(imageURL);

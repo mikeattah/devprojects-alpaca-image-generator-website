@@ -190,6 +190,10 @@
     align-items: flex-start;
   }
 
+  .app-canvas {
+    border: 1px solid red;
+  }
+
   .app-section-left-buttons {
     height: 17.5%;
     width: 80%;

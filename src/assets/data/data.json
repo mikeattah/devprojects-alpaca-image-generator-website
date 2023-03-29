@@ -2,12 +2,15 @@
   {
     "name": "Accessories",
     "images": [
-      { "name": "Earings", "path": "./assets/images/accessories/earings.png" },
+      {
+        "name": "Earings",
+        "path": "./assets/images/accessories/earings.png"
+      },
       { "name": "Flower", "path": "./assets/images/accessories/flower.png" },
       { "name": "Glasses", "path": "./assets/images/accessories/glasses.png" },
       {
-        "name": "Headphones",
-        "path": "./assets/images/accessories/headphones.png"
+        "name": "Headphone",
+        "path": "./assets/images/accessories/headphone.png"
       }
     ]
   },

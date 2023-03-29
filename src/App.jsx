@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 import './App.css';
-import { AlpacaImage } from './components/molecules';
 import { Button } from './components/atoms';
 import data from './assets/data/data.json';
 
@@ -35,6 +34,102 @@ function App() {
       Mouth: mouthName,
       Neck: neckName,
     };
+
+  // IIFE | Render Alpaca body parts' images on canvas after page load
+  // source: https://javascript.plainenglish.io/how-to-download-a-text-image-file-in-javascript-without-a-server-9ccadfbe4694
+  useEffect(() => {
+    (async () => {
+      const canvas = document.getElementById('alpaca-image'),
+        context = canvas.getContext('2d');
+
+      // clear canvas
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      // modify context settings
+      context.globalAlpha = 1.0;
+      context.imageSmoothingEnabled = true;
+      context.imageSmoothingQuality = 'high';
+      context.shadowOffsetX = 0;
+      context.shadowOffsetY = 0;
+      context.shadowColor = 'rgba(0, 0, 0, 0)';
+      context.miterLimit = 10;
+
+      // draw accessories
+      const accessoriesImage = new Image();
+      accessoriesImage.crossOrigin = 'anonymous';
+      accessoriesImage.src = accessoriesPath;
+      accessoriesImage.onload = () => {
+        context.drawImage(accessoriesImage, 0, 0, 70, 70);
+      };
+
+      // draw backgrounds
+      const backgroundsImage = new Image();
+      backgroundsImage.crossOrigin = 'anonymous';
+      backgroundsImage.src = backgroundsPath;
+      backgroundsImage.onload = () => {
+        context.drawImage(backgroundsImage, 0, 0, canvas.width, canvas.height);
+      };
+
+      // draw ears
+      const earsImage = new Image();
+      earsImage.crossOrigin = 'anonymous';
+      earsImage.src = earsPath;
+      earsImage.onload = () => {
+        context.drawImage(earsImage, 71, 0, 70, 70);
+      };
+
+      // draw eyes
+      const eyesImage = new Image();
+      eyesImage.crossOrigin = 'anonymous';
+      eyesImage.src = eyesPath;
+      eyesImage.onload = () => {
+        context.drawImage(eyesImage, 142, 0, 70, 70);
+      };
+
+      // draw hair
+      const hairImage = new Image();
+      hairImage.crossOrigin = 'anonymous';
+      hairImage.src = hairPath;
+      hairImage.onload = () => {
+        context.drawImage(hairImage, 213, 0, 70, 70);
+      };
+
+      // draw leg
+      const legImage = new Image();
+      legImage.crossOrigin = 'anonymous';
+      legImage.src = legPath;
+      legImage.onload = () => {
+        context.drawImage(legImage, 284, 0, 70, 70);
+      };
+
+      // draw mouth
+      const mouthImage = new Image();
+      mouthImage.crossOrigin = 'anonymous';
+      mouthImage.src = mouthPath;
+      mouthImage.onload = () => {
+        context.drawImage(mouthImage, 0, 71, 70, 70);
+      };
+
+      // draw neck
+      const neckImage = new Image();
+      neckImage.crossOrigin = 'anonymous';
+      neckImage.src = neckPath;
+      neckImage.onload = () => {
+        context.drawImage(neckImage, 71, 71, 70, 70);
+      };
+
+      // draw nose
+      const noseImage = new Image();
+      noseImage.crossOrigin = 'anonymous';
+      noseImage.src = nosePath;
+      noseImage.onload = () => {
+        context.drawImage(noseImage, 142, 71, 70, 70);
+      };
+
+      /* Finally, retrieve the encoded image content as a base64 String from canvas object */
+      setImageURL(await Promise.resolve(canvas.toDataURL('image/png')));
+    })();
+  });
 
   /**
    * Update user selection
@@ -179,15 +274,6 @@ function App() {
     }
   };
 
-  /**
-   * Download Alpaca Image to user's computer
-   *
-   * @return void
-   *
-   * source: https://javascript.plainenglish.io/how-to-download-a-text-image-file-in-javascript-without-a-server-9ccadfbe4694
-   */
-  // const handleImageDownload = async () => {};
-
   return (
     <div className='app-container'>
       <header className='app-header'>
@@ -195,20 +281,18 @@ function App() {
       </header>
       <main className='app-main'>
         <section className='app-section-left'>
-          <canvas id='alpaca-image' width='300' height='400'>
-            <AlpacaImage
-              accessoriesPath={accessoriesPath}
-              backgroundsPath={backgroundsPath}
-              earsPath={earsPath}
-              eyesPath={eyesPath}
-              hairPath={hairPath}
-              legPath={legPath}
-              mouthPath={mouthPath}
-              neckPath={neckPath}
-              nosePath={nosePath}
-              setImageURL={imageURL => setImageURL(imageURL)}
+          <canvas
+            id='alpaca-image'
+            width='360'
+            height='400'
+            className='app-canvas'
+          >
+            <img
+              src={imageURL}
+              alt='Alpaca Image Rendering'
+              width='360'
+              height='400'
             />
-            Alpaca Image Rendering
           </canvas>
           <div className='app-section-left-buttons'>
             <Button
