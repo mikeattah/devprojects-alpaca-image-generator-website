@@ -1,51 +1,269 @@
-.primary-button {
-  display: block;
-  height: 40px;
-  width: 150px;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-  border: 1.5px solid #ffffff;
-  outline: none;
-  text-decoration: none;
-  text-align: center;
-  line-height: 32px;
+@media (max-width: 480px) {
+  .primary-button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+  }
+
+  .secondary-button:active {
+    border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
+  }
+
+  .secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+  }
+
+  .secondary-button-clicked {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button-clicked:hover {
+    background-color: #ebebec;
+    color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
 }
 
-.primary-button:hover {
-  color: #0c295e;
-  cursor: pointer;
-  border: 1.5px solid #0c295e;
+@media (max-width: 768px) {
+  .primary-button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+  }
+
+  .secondary-button:active {
+    border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
+  }
+
+  .secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+  }
+
+  .secondary-button-clicked {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button-clicked:hover {
+    background-color: #ebebec;
+    color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
 }
 
-.secondary-button {
-  border: 1.5px solid #bccce6;
-  border-radius: 25px;
-  margin: 3px 6px 3px 0;
-  padding: 12px 24px;
-  font-weight: bold;
-  color: #bccce6;
+@media (max-width: 1024px) {
+  .primary-button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+  }
+
+  .secondary-button:active {
+    border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
+  }
+
+  .secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+  }
+
+  .secondary-button-clicked {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button-clicked:hover {
+    background-color: #ebebec;
+    color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
 }
 
-.secondary-button:active {
-  border: 1.5px solid #0c295e;
-  outline: 1.5px solid #0c295e;
+@media (max-width: 1200px) {
+  .primary-button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+  }
+
+  .secondary-button:active {
+    border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
+  }
+
+  .secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+  }
+
+  .secondary-button-clicked {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button-clicked:hover {
+    background-color: #ebebec;
+    color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
 }
 
-.secondary-button:hover {
-  background-color: #0c295e;
-  border: 1.5px solid #0c295e;
-  cursor: pointer;
-}
+@media (min-width: 1201px) {
+  .primary-button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+  }
 
-.secondary-button-clicked {
-  background-color: #0c295e;
-  border: 1.5px solid #0c295e;
-}
+  .primary-button:hover {
+    color: #0c295e;
+    cursor: pointer;
+    border: 1.5px solid #0c295e;
+  }
 
-.secondary-button-clicked:hover {
-  background-color: #ebebec;
-  color: #0c295e;
-  border: 1.5px solid #0c295e;
+  .secondary-button {
+    border: 1.5px solid #bccce6;
+    border-radius: 25px;
+    margin: 3px 6px 3px 0;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #bccce6;
+  }
+
+  .secondary-button:active {
+    border: 1.5px solid #0c295e;
+    outline: 1.5px solid #0c295e;
+  }
+
+  .secondary-button:hover {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+    cursor: pointer;
+  }
+
+  .secondary-button-clicked {
+    background-color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
+
+  .secondary-button-clicked:hover {
+    background-color: #ebebec;
+    color: #0c295e;
+    border: 1.5px solid #0c295e;
+  }
 }
